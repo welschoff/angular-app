@@ -5,3 +5,7 @@
 <hr>
 <app-warning-alert></app-warning-alert>
 <app-success-alert></app-success-alert>
+<label>Username</label>
+<input type="text" class="form-control" [(ngModel)]="username">
+<button (click)="username = ''" [disabled]="username === ''">Delete username</button>
+<p>{{ username }}</p>
