@@ -15,6 +15,6 @@
 <!-- <button (click)="displayed = !displayed">Display Details</button> -->
 <button (click)="onToggleDetails()">Display Details</button>
 <p *ngIf="displayed">Sercret password = tuna</p>
-<div *ngFor="let logItem of log" [ngStyle]="{backgroundColor: logItem >= 5 ? 'blue' : ''}"
-    [ngClass]="{'white-text': logItem >= 5}">{{ logItem }}
+<div *ngFor="let logItem of log; let i = index" [ngStyle]="{backgroundColor: i > 4 ? 'blue' : ''}"
+    [ngClass]="{'white-text': i >= 5}">{{ logItem }}
 </div>
